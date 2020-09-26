@@ -59,6 +59,7 @@ $(document).ready(function(){
                 var email = $("#email").val();
                 var subject = $("#subject").val();
                 var message = $("textarea#message").val();
+                var recaptcha = $("textarea#g-recaptcha-response").val();
                 console.log(name + email + subject + message);
 
                 $.ajax({
@@ -68,9 +69,10 @@ $(document).ready(function(){
                     name: name,
                     email: email,
                     subject: subject,
-                    message: message
+                    message: message,
+                    'g-recaptcha-response': recaptcha,
                   },
-                  
+
                   url: "https://formspree.io/xoqpvvqp",
                   success: function () {
                     $("#contactForm :input").attr("disabled", "disabled");
