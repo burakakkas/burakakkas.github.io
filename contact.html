@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="mail_sender.js"></script>
 
     </head>
@@ -112,7 +114,7 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row contact_form" action="" method="" id="contactForm" novalidate="novalidate">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -129,8 +131,9 @@
                                     <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
                                 </div>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6LcJ1tAZAAAAAGe-G1UkpGFTiwNZf8lRhxODbIai"></div>
                             <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                                <button type="submit" value="submit" id="send-mail" class="btn submit_btn">Send Message</button>
                             </div>
                         </form>
                     </div>

@@ -55,28 +55,41 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
-                $(form).ajaxSubmit({
-                    type:"POST",
-                    data: $(form).serialize(),
-                    url:"contact_process.php",
-                    success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor','default');
-                            $('#success').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#success').modal('show');
-                        })
-                    },
-                    error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $('#error').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#error').modal('show');
-                        })
-                    }
-                })
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var subject = $("#subject").val();
+                var message = $("textarea#message").val();
+                console.log(name + email + subject + message);
+
+                $.ajax({
+                  type: "POST",
+                  dataType: "json",
+                  data: {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                  },
+                  
+                  url: "https://formspree.io/xoqpvvqp",
+                  success: function () {
+                    $("#contactForm :input").attr("disabled", "disabled");
+                    $("#contactForm").fadeTo("slow", 1, function () {
+                      $(this).find(":input").attr("disabled", "disabled");
+                      $(this).find("label").css("cursor", "default");
+                      $("#success").fadeIn();
+                      $(".modal").modal("hide");
+                      $("#success").modal("show");
+                    });
+                  },
+                  error: function () {
+                    $("#contactForm").fadeTo("slow", 1, function () {
+                      $("#error").fadeIn();
+                      $(".modal").modal("hide");
+                      $("#error").modal("show");
+                    });
+                  },
+                });
             }
         })
     })
