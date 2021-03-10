@@ -1,0 +1,36 @@
+{
+  "Posts": [
+    {
+      "post-title": "Top 11 Python Frameworks for Web Development In 2021 ",
+      "post-desc": "Listed below are the top Python frameworks that a web development company and developers should choose in 2021 for enhancing website performance and time-to-market.",
+      "post-tags": ["linux", "tech", "sample"],
+      "post-date": "13 March",
+      "view-num": "18",
+      "post-id": "3"
+    },
+    {
+      "post-title": "Python Scraping Frameworks",
+      "post-desc": "Web scraping is the easiest and fastest method to extract data from the internet. With so many web scraping tutorials and guides available out there on so many frameworks, programming languages, and libraries, it could be quite confusing to pick one for your web scraping needs.",
+      "post-tags": ["linux", "tech", "sample"],
+      "post-date": "23 February",
+      "view-num": "23",
+      "post-id": "2"
+    },
+    {
+      "post-title": "Virtualization Technologies",
+      "post-desc": "Virtualization is the process of creating a software-based, or virtual, representation of something, such as virtual applications, servers, storage and networks.",
+      "post-tags": ["linux", "tech", "sample"],
+      "post-date": "17 February",
+      "view-num": "15",
+      "post-id": "1"
+    },
+    {
+      "post-title": "What is Docker and Containers?",
+      "post-desc": "Docker is an open-source software designed to facilitate and simplify application development. It is a set of platform-as-a-service products that create isolated virtualized environments for building, deploying, and testing applications.",
+      "post-tags": ["Architecture", "Tools"],
+      "post-date": "4 February",
+      "view-num": "10",
+      "post-id": "0"
+    }
+  ]
+}
