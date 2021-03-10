@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=9f8d6bda-c1ff-45fc-9e73-b4daae9ec6b0&lang=en_US" type="text/javascript"></script>
         <script src="./js/footer.js"></script>
     </head>
     <body>
@@ -63,16 +63,17 @@
         <!--================Header Menu Area =================-->
         
         <!--================Contact Area =================-->
-        <section class="contact_area p_240_120">
+        <section class="contact_area p_100">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
+                <!--<div id="mapBox" class="mapBox" 
                     data-lat="39.933365" 
                     data-lon="32.859741" 
                     data-zoom="13" 
                     data-info="Çankaya - Ankara, Turkey."
                     data-mlat="39.933365"
                     data-mlon="32.859741">
-                </div>
+                </div>-->
+                <div id="map" style="width: 80%; height: 400px; margin: 0 auto; margin-bottom: 10%;"></div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="contact_info">
@@ -179,7 +180,24 @@
         <script src="js/contact.js"></script>
         <!--gmaps Js-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClxd3VYEGhx26Qf8WEBX-80USH9jw4MPI"></script>
-        <script src="js/gmaps.min.js"></script>
         <script src="js/theme.js"></script>
+        <script type="text/javascript">
+            // The ymaps.ready() function will be called when
+            // all the API components are loaded and the DOM tree is generated.
+            ymaps.ready(init);
+            function init() {
+                // Creating the map.    
+                var myMap = new ymaps.Map("map", {
+                    // The map center coordinates.
+                    // Default order: “latitude, longitude”.
+                    // To not manually determine the map center coordinates,
+                    // use the Coordinate detection tool.
+                    center: [39.933365, 32.859741],
+                    // Zoom level. Acceptable values:
+                    // from 0 (the entire world) to 19.
+                    zoom: 11
+                });
+            }
+        </script>
     </body>
 </html>

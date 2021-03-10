@@ -3062,6 +3062,11 @@ width: 8em;
 background-color: #a57454;
 }
 
+.image-polaroid{
+width: 500px;
+max-height: 500px;
+}
+
 @media screen and (max-width: 990px) {
 #blog-button{
 display: block;
@@ -3085,6 +3090,9 @@ background-color: #a57454;
   padding-left: auto;
   padding-right: auto;
   
+}
+.image-polaroid{
+  width: 100%;
 }
 }
 /* End Footer Area css
